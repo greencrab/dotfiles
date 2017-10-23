@@ -147,6 +147,9 @@ alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v exten
 # Lock the screen (when going AFK)
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 
+# Use git work-tree for configuring dotfiles
+alias config='/usr/bin/git --git-dir=$HOME/.mycfg/ --work-tree=$HOME'
+
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"
 
