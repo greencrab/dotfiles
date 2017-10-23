@@ -48,10 +48,3 @@ complete -W "NSGlobalDomain" defaults;
 # Add `killall` tab completion for common apps
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
 
-# Add mesos libraries
-[ -e "/usr/local/lib/libmesos.dylib" ] && export MESOS_NATIVE_JAVA_LIBRARY=/usr/local/lib/libmesos.dylib;
-
-# path to the DC/OS CLI binary
-if [[ "$PATH" != *"/Users/elau/sandbox/dcos/bin"* ]];
-  then export PATH=$PATH:/Users/elau/sandbox/dcos/bin;
-fi
