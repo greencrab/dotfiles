@@ -235,12 +235,6 @@ function tre() {
 	tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX;
 }
 
-
-function killmesos() {
-    ssh -i ~/.ssh/spark-data-science-v1.pem ubuntu@"$@"  "sudo killall mesos-executor"
-}
-
-
 function addflint() {
     flintrock add-slaves --num-slaves="$@" vspark
 }
