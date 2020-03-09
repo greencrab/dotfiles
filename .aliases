@@ -162,6 +162,8 @@ alias mysql="mysql -A"
 alias dockclean='docker rm -v $(docker ps -a -q -f status=exited)'
 alias dockclear='docker rmi $(docker images -f "dangling=true" -q)'
 
+# OSX notifier
+alias notifyme="osascript -e 'display notification \"Job is done\" with title \"WakeUp\"'"
 
 # Flintrock shortcut
 alias fv='flintrock describe vspark'

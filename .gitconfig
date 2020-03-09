@@ -2,9 +2,11 @@
 
 	# View abbreviated SHA, description, and history graph of the latest 20 commits
 	l = log --pretty=oneline -n 20 --graph --abbrev-commit
+  	lo = log --oneline -n 10
 
 	# View the current working tree status using the short format
 	s = status -s
+        st = status -uno
 
 	# Show the diff between the latest commit and the current state
 	d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
@@ -17,6 +19,9 @@
 
 	# Clone a repository including all submodules
 	c = clone --recursive
+
+        # commit message
+	cm = commit -m
 
 	# Commit all changes
 	ca = !git add -A && git commit -av
